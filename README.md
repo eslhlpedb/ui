@@ -79,16 +79,6 @@ import {
 
 ## Accessibility
 
-Adheres to the [WAI-ARIA Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+### Screen Readers
 
-> **Note:** Every `DialogContent` must include a `DialogTitle` to ensure accessible announcements for screen readers. If a visible title isn't desired, wrap `DialogTitle` with a visually hidden class like `sr-only`.
-
-### Keyboard Interactions
-
-| Key | Description |
-| --- | --- |
-| `<kbd>Tab</kbd>` | Moves focus to the next focusable element within the dialog. |
-| `<kbd>Shift</kbd> + <kbd>Tab</kbd>` | Moves focus to the previous focusable element within the dialog. |
-| `<kbd>Esc</kbd>` | Closes the dialog and returns focus to the trigger element. |
-| `<kbd>Space</kbd>` | Activates the trigger when focused. |
-| `<kbd>Enter</kbd>` | Activates the trigger when focused. |
+Ensure that `DialogTitle` and `DialogDescription` are included inside `DialogContent` so screen readers properly announce the dialog title and purpose upon opening. If a visible description is not needed, use a visually hidden element to maintain accessible labeling.
